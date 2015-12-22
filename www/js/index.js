@@ -30,7 +30,7 @@ var cargarDB = {
         this.db.transaction(this.cargarLocalDB, this.createDBError);
     },
     cargarLocalDB:function(tx){
-        var sql="SELECT * FROM localDB;";
+        var sql="SELECT * FROM localDB order by ultimos DESC;";
         console.log("Lanzando el select a la tabla localDB");
         tx.executeSql(
             sql,
@@ -107,13 +107,12 @@ var confDB = {
                 "ultimos INTEGER (1));";
         tx.executeSql(sql);
 
-        var sql2 = "INSERT INTO localDB VALUES (1, 'hola', 'prueba', 'hol', 25, 'maisi', 'local', 0);";
+        var sql2 = "INSERT INTO localDB(nombre,apellidos,equipo,edad,email,localidad,ultimos)"+
+                    " VALUES('Prueba no ultimo','prueba1','prueba1', 12,'prueba1','prueba1',0);";
         tx.executeSql(sql2);  
 
-        var sql2 = "INSERT INTO localDB VALUES (2, 'Prueba de ultimos', 'prueba 2', 'hol', 25, 'maisi', 'local', 1);";
-        tx.executeSql(sql2); 
-
-        var sql2 = "INSERT INTO localDB VALUES (3, 'Prueba de ultimos', 'prueba 3', 'hol', 25, 'maisi', 'local', 0);";
+        var sql2 = "INSERT INTO localDB(nombre,apellidos,equipo,edad,email,localidad,ultimos)"+
+                    " VALUES('Prueba ultimo','prueba1','prueba1', 12,'prueba1','prueba1',1);";
         tx.executeSql(sql2); 
     },
     createDBError:function(err){
