@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="./tema/themes/jquery.mobile.icons.min.css" />   
+    <link rel="stylesheet" type="text/css" href="jq/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/personalizado.css" />
+    <link rel="stylesheet" type="text/css" href="./tema/themes/tema.css" />
+    <link rel="stylesheet" type="text/css" href="./tema/themes/tema.min.css" />
+</head>
+<body>
+    
+<div data-role="page">
+<div data-role="header">
+<h1>Nuevo Jugador</h1>
+  </div>
+  <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <div>
+      <label for="foto" style="text-transform: capitalize;">Seleccione una foto de perfil:</label>
+      <input type="file" name="img">
+      </div>
+      <div>
+        <label for="info" style="text-transform: capitalize;">Nombre:</label>
+        <textarea name="datoNombre" id="valNombre" placeholder="Nombre"></textarea>
+      </div>
+
+      <div>
+        <label for="info" style="text-transform: capitalize;">Apellidos:</label>
+        <textarea name="datApellido" id="valApellidos" placeholder="Apellidos"></textarea>
+      </div>
+
+      <div>
+        <label for="info" style="text-transform: capitalize;">Equipo:</label>
+        <textarea name="datoEquipo" id="valEquipo" placeholder="Equipo"></textarea>
+      </div>
+
+      <div>
+        <label for="info" style="text-transform: capitalize;">Edad:</label>
+        <textarea name="datoEdad" id="valEdad" placeholder="Edad"></textarea>
+      </div>
+
+      <div>
+        <label for="info" style="text-transform: capitalize;">E-mail:</label>
+        <textarea name="datoEmail" id="valEmail" placeholder="E-mail"></textarea>
+      </div>
+
+      <div>
+        <label for="info" style="text-transform: capitalize;">Localidad:</label>
+        <textarea name="datoLocalidad" id="valLocalidad" placeholder="Localidad"></textarea>
+      </div>
+
+      </div>
+            <div data-role="footer" data-position="fixed" class="ui-bar">
+            <a href="index.html" data-role="button" data-ajax="false" data-icon="check" id="salvar">Continuar</a>
+            <a href="#" data-role="button" data-icon="delete">Restablecer</a>
+          </div>
+    </form> 
+
+    <div class="volverEnEnviar">
+    <p>Volver a la lista</p>
+    <a href="index.html">
+        <img class="flechaAlante" src=".\img\flechaAtras.jpg">
+    </a>
+    </div>
+
+  </div>
+</div>
+      <script type="text/javascript" src="jq/jquery-1.11.3.js"></script>
+      <script src="jq/jquery.mobile-1.4.5.min.js"></script>
+      
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/guardar.js"></script>
+      <script type="text/javascript">
+            app.initialize();
+        </script>
+</body>
+</html>
