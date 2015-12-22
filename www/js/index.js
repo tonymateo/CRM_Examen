@@ -109,6 +109,12 @@ var confDB = {
 
         var sql2 = "INSERT INTO localDB VALUES (1, 'hola', 'prueba', 'hol', 25, 'maisi', 'local', 0);";
         tx.executeSql(sql2);  
+
+        var sql2 = "INSERT INTO localDB VALUES (2, 'Prueba de ultimos', 'prueba 2', 'hol', 25, 'maisi', 'local', 1);";
+        tx.executeSql(sql2); 
+
+        var sql2 = "INSERT INTO localDB VALUES (3, 'Prueba de ultimos', 'prueba 3', 'hol', 25, 'maisi', 'local', 0);";
+        tx.executeSql(sql2); 
     },
     createDBError:function(err){
         console.log("Se ha producido un error en la creacion de la base de datos: "+err.code);
