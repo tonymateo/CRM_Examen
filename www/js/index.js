@@ -103,12 +103,12 @@ var confDB = {
                 "equipo VARCHAR(120),"+
                 "edad INTEGER,"+
                 "email VARCHAR(240),"+
-                "localidad VARCHAR(240) );"
-                ;
+                "localidad VARCHAR(240),"+
+                "ultimos INTEGER (1));";
         tx.executeSql(sql);
 
-        var sql2 = "INSERT INTO localDB VALUES (1, 'Prueba de insert nombre', 'prueba apelidos', 'prueba equipo', 25, 'prueba@gmail.com', 'prueba localidad');";
-        tx.executeSql(sql2);
+        var sql2 = "INSERT INTO localDB VALUES (1, 'hola', 'prueba', 'hol', 25, 'maisi', 'local', 0);";
+        tx.executeSql(sql2);  
     },
     createDBError:function(err){
         console.log("Se ha producido un error en la creacion de la base de datos: "+err.code);
